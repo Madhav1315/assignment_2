@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner giveinput = new Scanner(System.in);
+        int userinputfirst = giveinput.nextInt(), userinputsecond = giveinput.nextInt(), printcounter = 1;
+        for (int counterforloop = 1; printcounter <= userinputfirst; counterforloop++) {
+            int printingvalue = 3 * counterforloop + 2;
+            if (printingvalue % userinputsecond != 0) {
+                System.out.println(printingvalue);
+                printcounter = printcounter + 1;
+            }
+        }
+        giveinput.close();
+    }
+}
