@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(), number = n, addition = 0, power = 1;
+        while (number > 0) {
+            int r = number % 10;
+            addition += (int) (power * Math.pow(10, r - 1));
+            power++;
+            number /= 10;
+        }
+        System.out.print(addition);
+        input.close();
+    }
+}
