@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner giveinput = new Scanner(System.in);
+        int userfirstinput = giveinput.nextInt(), usersecondinput = giveinput.nextInt();
+        int productofno = userfirstinput * usersecondinput;
+        while (userfirstinput % usersecondinput != 0) {
+            int tempvariable = usersecondinput;
+            usersecondinput = userfirstinput % usersecondinput;
+            userfirstinput = tempvariable;
+        }
+        int lcmofnumber = productofno / usersecondinput;
+        System.out.println(lcmofnumber);
+        giveinput.close();
+    }
+}
